@@ -1,7 +1,10 @@
 import requests
+from dotenv import load_dotenv
+
+load_dentenv()
 
 API_URL = "https://api-inference.huggingface.co/models/gpt2"
-headers = {"Authorization": "Bearer api_eUAuicyHOJMmINfXLmnNLpZGezldexuuyr"}
+headers = {"Authorization": "Bearer" + os.getenv('API_KEY')}
 
 def query(payload):
 	response = requests.post(API_URL, headers=headers, json=payload)
