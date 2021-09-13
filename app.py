@@ -1,7 +1,7 @@
 import requests
 from dotenv import load_dotenv
 
-load_dentenv()
+load_dotenv()
 
 API_URL = "https://api-inference.huggingface.co/models/gpt2"
 headers = {"Authorization": "Bearer" + os.getenv('API_KEY')}
