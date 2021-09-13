@@ -6,7 +6,7 @@ import streamlit as st
 load_dotenv()
 
 API_URL = "https://api-inference.huggingface.co/models/gpt2"
-headers = {"Authorization": "Bearer" + os.getenv('API_KEY')}
+headers = {"Authorization": "Bearer " + os.getenv('API_KEY')}
 
 def query(payload):
 	response = requests.post(API_URL, headers=headers, json=payload)
